@@ -10,7 +10,8 @@
     'item7'
     'item8'
     'item9'
-    'item10';  
+    'item10'
+    'item11';  
     grid-gap: 0px;
     background-color: rgb(255, 255, 255);
     padding: 5%;
@@ -33,6 +34,7 @@
   .item8 { grid-area: item8; }
   .item9 { grid-area: item9; }
   .item10 { grid-area: item10; }
+  .item11 { grid-area: item10; }
 
   .helps {
     padding-top: 3000px;
@@ -612,7 +614,9 @@ video{
 .grid-container2 .item7,
 .grid-container2 .item8, 
 .grid-container2 .item9,
-.grid-container2 .item10 {
+.grid-container2 .item10,
+.grid-container2 .item11
+{
   opacity: 0; /* Start with items hidden */
   animation: fadeIn 1s ease forwards;
 }
@@ -645,4 +649,8 @@ video{
   animation-delay: 3s; /* 5 seconds delay */
 }
 
+.grid-container2 .item10 {
+  animation-delay: 3.5s; /* 5 seconds delay */
+}
 
+#loadOverlay{display: none;}
