@@ -94,7 +94,7 @@ color: #000;
 
 
 
-@media screen and (min-width: 1200px) and (max-width: 1500px ) {
+@media screen and (min-width: 1200px)   {
   .item1 img, .item2 img, .item3 img, .item6 img, .item7 img, .item8 img, .item9 img {
     display: block;          /* Make the image a block-level element */
     margin: 0 auto;          /* Center the image horizontally */
