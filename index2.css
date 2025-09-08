@@ -1,0 +1,128 @@
+/* Fade-in animation */
+.fade-in {
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+}
+
+.visible {
+  opacity: 1;
+}
+
+/* Grid layout */
+.grid-container {
+  display: grid;
+  grid-template-areas:
+    'item1 item1 item1 item1 item2'
+    'item3 item3 item3 item3 item3'
+    'item4 item4 item4 item4 item4'
+    'item5 item5 item5 item5 item5';
+  grid-gap: 0;
+  background-color: #fff;
+  padding: 7%;
+}
+
+.grid-container > div {
+  background-color: #fff;
+  text-align: center;
+}
+
+.item1 { grid-area: item1; }
+.item2 { grid-area: item2; }
+.item3 { grid-area: item3; }
+.item4 { grid-area: item4; }
+.item5 { grid-area: item5; }
+
+#img4 {
+   max-width: 100%;
+  height: auto;
+}
+
+ 
+/* === Responsive Typography === */
+.title {
+  float: left;
+  font-style: oblique;
+  font-family: "sorts_mill_goudyschoolbook", serif;
+  white-space: nowrap; 
+  color: rgb(72, 125, 98);
+  line-height: 95%;
+  font-weight: 100;
+  padding-top: 5px;
+  font-size: clamp(20px, 3.5vw, 100px); /* Responsive size */
+}
+
+.mezzo {
+  font-style: oblique;
+  font-family: "palatino";
+  color: rgb(78, 36, 36);
+  font-size: clamp(13px, 1.5vw, 40px);
+  display: block;
+  float: left;
+  clear: left;  /* Pushes this below the floated .title */
+  margin-top: 5px;
+}
+
+/* Links in item2 */
+.item2 a {
+  display: block;
+  text-align: right;
+  position: relative;
+  font-style: oblique;
+  padding-right: 20px;
+  font-family: "palatino";
+  color: rgb(78, 36, 36);
+  text-decoration: none;
+  font-size: clamp(13px, 1vw, 30px); /* Optional scaling */
+}
+
+/* Image sizing */
+#img5 {
+  
+  padding-top: 10px;
+   float: left;
+  position: relative;
+  width: clamp(12px, 1.7vw, 28px); /* scales between 15px and 30px, depending on viewport width */
+  height: auto; /* keeps aspect ratio */ 
+     margin-right: clamp(5px, 1vw, 5px); /* adds a small responsive gap to the right */
+   
+}
+
+#img6 { 
+ padding-top: 9px;
+   float: left;
+  position: relative;
+  width: clamp(15px, 2vw, 30px); /* scales between 15px and 30px, depending on viewport width */
+  height: auto; /* keeps aspect ratio */ 
+   
+}
+
+/* Layout for larger screens */
+@media (min-width: 1200px) {
+  body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+  }
+
+  .leftside {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    width: 50%;
+    overflow-y: hidden;
+  }
+
+  .rightside {
+    overflow-y: auto;
+  }
+}
+
+
+@media (min-width: 3600px) {
+#img4 {
+   max-width: 100%;
+  height: auto;
+  float: left;
+}
+
+}
