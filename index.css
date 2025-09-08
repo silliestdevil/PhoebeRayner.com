@@ -146,6 +146,30 @@
       font-size: 55px;
     }
   }
-}
+ 
 
-#loadOverlay{display: none;}
+  @media (min-width: 1600px) {
+    body, html {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+    }
+
+    .leftside {
+      position: fixed;
+      top: 0;
+      bottom: 0;
+      width: 50%;
+      overflow-y: hidden;
+    }
+
+    .rightside {
+      overflow-y: auto;
+    }
+
+    .title {
+      font-size: 60px;
+    }
+  }
+    }
+
