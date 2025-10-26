@@ -5,13 +5,8 @@ body, a, .des, .note, .about, .footers {
   text-align: left;
 }
 
-.des, .item1 a, .item12 a, .item3 a, .note, .about, .footers {
-  font-size: 13px;
-}
-
-.item1 a, .item12 a, .item3 a {
-  float: left;
-  text-decoration: none;
+.des, .note, .about, .footers {
+font-size: clamp(9px, 1vw + 0.5rem, 14px);
 }
 
 .item1 a:hover, .item12 a:hover, .item3 a:hover {
