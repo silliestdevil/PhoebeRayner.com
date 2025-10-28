@@ -1,12 +1,25 @@
 /* Consolidated General Styles */
-body, a, .des, .note, .about, .footers {
-  font-family: "palatino";
-  color: rgb(78, 36, 36);
+
+   html, body {
+      height: 100%;
+    }
+
+       body { 
+    background-color: rgb(255, 255, 255);
+    }
+
+
+
+.des, .note, .about{
+  font-family: "Diodrum W03 Regular";
+  color: rgb(0, 0, 0);
   text-align: left;
+  padding-left: 2%;
+  width: 90%;
 }
 
-.des, .note, .about, .footers {
-font-size: clamp(9px, 1vw + 0.5rem, 14px);
+.des, .note, .about{
+ font-size: clamp(9px, 0.77rem, 20px);
 }
 
 .item1 a:hover, .item12 a:hover, .item3 a:hover {
@@ -14,41 +27,44 @@ font-size: clamp(9px, 1vw + 0.5rem, 14px);
   text-decoration: none;
 }
 
-.about {
-  border-top: solid black 1px;
-  padding-top: 10px;
-  float: left;
-}
 
-.footers {
+
+footer, .footer {
+    color: rgb(0, 0, 0);
+    font-family: "Diodrum W03 Regular";
+  font-size: clamp(8px, 1vw + 0.5rem, 10px);
   text-align: center;
-  font-size: 11px;
+  padding: 3rem 0 ;
+   margin-top: auto;  
+   text-decoration: none;
 }
 
-.footers a {
-  text-decoration: none;
+
+.grid-container3 {
+  flex: 1; /* Fills all available vertical space */
+  display: grid;
+  grid-template-areas: 
+    'item1'
+    'item12'
+    'item3'
+    'item4'
+    'item5'
+    'item6'
+    'item7'
+    'item8'
+    'item9';
+  min-height: 90vh;  
 }
 
-/* Media Queries */
-@media screen and (min-width: 1100px)  {
-  body {
-    overflow-y: hidden;
+
+  .grid-container3 > div {
+    background-color: rgb(255, 255, 255);
+    padding-left: 20px;
+    padding-right: 50px;
   }
+
+
   
-  .grid-container3 {
-    display: grid;
-    grid-template-areas: 'item1' 'item12' 'item3' 'item4' 'item5' 'item6' 'item7' 'item8' 'item9';
-    grid-gap: 0px;
-    background-color: rgb(255, 255, 255);
-    min-height: 100vh;
-  }
-
-  .grid-container3 > div {
-    background-color: rgb(255, 255, 255);
-    padding-left: 20px;
-    padding-right: 50px;
-  }
-
   .item1 { grid-area: item1; }
   .item12 { grid-area: item12; }
   .item3 { grid-area: item3; }
@@ -57,74 +73,24 @@ font-size: clamp(9px, 1vw + 0.5rem, 14px);
   .item6 { grid-area: item6; }
   .item7 { grid-area: item7; }
   .item8 { grid-area: item8; }
-  .item9 { grid-area: item9; }
+  
+/* Media Queries */
+
+
+@media (min-width: 770px) {
+  .grid-container3 { 
+    padding-top: 10%;
+  }
 }
 
-/* Additional size adjustments for different screen sizes */
-@media screen and (min-width: 1100px) and (max-width: 1150px) {
-  .des, .item1 a, .item12 a, .item3 a, .note, .about {
-    font-size: 11.5px;
+@media (max-width: 770px) {
+  .grid-container3 { 
+    padding-left: 7%;
   }
-
-  .grid-container3 {
-    display: grid;
-    grid-template-areas: 'item1' 'item12' 'item3' 'item4' 'item5' 'item6' 'item7' 'item8' 'item9';
-    grid-gap: 0px;
-    background-color: rgb(255, 255, 255);
-    min-height: 100vh;
-  }
-
-  .grid-container3 > div {
-    background-color: rgb(255, 255, 255);
-    padding-left: 20px;
-    padding-right: 50px;
-  }
-
-  .item1 { grid-area: item1; }
-  .item12 { grid-area: item12; }
-  .item3 { grid-area: item3; }
-  .item4 { grid-area: item4; }
-  .item5 { grid-area: item5; }
-  .item6 { grid-area: item6; }
-  .item7 { grid-area: item7; }
-  .item8 { grid-area: item8; }
-  .item9 { grid-area: item9; }
 }
 
-@media screen and (min-width: 300px) and (max-width: 1100px) {
-  .grid-container3 {
-    padding-left: 8%;
-    padding-right: 8%;
-  }
 
-  .footers {
-    padding-top: 20px;
-  }
 
-  .grid-container3 {
-    display: grid;
-    grid-template-areas: 'item1' 'item12' 'item3' 'item4' 'item5' 'item6' 'item7' 'item8' 'item9';
-    grid-gap: 0px;
-    background-color: rgb(255, 255, 255);
-    min-height: 100vh;
-  }
-
-  .grid-container3 > div {
-    background-color: rgb(255, 255, 255);
-    padding-left: 20px;
-    padding-right: 50px;
-  }
-
-  .item1 { grid-area: item1; }
-  .item12 { grid-area: item12; }
-  .item3 { grid-area: item3; }
-  .item4 { grid-area: item4; }
-  .item5 { grid-area: item5; }
-  .item6 { grid-area: item6; }
-  .item7 { grid-area: item7; }
-  .item8 { grid-area: item8; }
-  .item9 { grid-area: item9; }
-}
 
 /* Fade-in Animations */
 @keyframes fadeIn {
@@ -139,8 +105,7 @@ font-size: clamp(9px, 1vw + 0.5rem, 14px);
 .grid-container3 .item5,
 .grid-container3 .item6,
 .grid-container3 .item7,
-.grid-container3 .item8,
-.grid-container3 .item9 {
+.grid-container3 .item8{
   opacity: 0;
   animation: fadeIn 1s ease forwards;
 }
